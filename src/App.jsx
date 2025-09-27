@@ -1,5 +1,6 @@
 import About from './components/About'
 import Gallery from './components/Gallery'
+import Menu from './components/Menu'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <div>
         <About />
+        <Menu/>
         <Gallery/>
       </div>
     </>

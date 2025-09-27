@@ -21,11 +21,13 @@ const Contact = () => {
     alert("Message sent!");
     setFormData({ name: "", email: "", message: "" });
   };
+  
   return (
-    <div>
+    <div id="contact">
+      <h2>Contact Us</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label>
-          Name:
+          <p>Name</p>
           <input
             type="text"
             name="name"
@@ -36,7 +38,7 @@ const Contact = () => {
         </label>
 
         <label>
-          Email:
+          <p>Email</p>
           <input
             type="email"
             name="email"
@@ -47,16 +49,17 @@ const Contact = () => {
         </label>
 
         <label>
-          Message:
-          <textarea
+          <p>Message</p>
+          <textarea className="message"
             name="message"
             value={formData.message}
+            
             onChange={handleChange}
             required
           />
         </label>
 
-        <button type="submit">Send</button>
+        <button className="contact-submit" type="submit">Send</button>
       </form>
     </div>
   );
