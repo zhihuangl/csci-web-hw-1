@@ -1,3 +1,6 @@
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <div id="footer">
@@ -12,16 +15,21 @@ const Footer = () => {
         <p className="days">Sunday: 11am - 9pm</p>
       </div>
       <div className="links">
-        
-        <a href="" className="media-links">
-          <img src="../images/img.jpg" alt="instagram"></img>
-        </a>
-        <a href="" className="media-links">
-          <img src="../images/img.jpg" alt="facebook"></img>
-        </a>
-        <a href="" className="media-links">
-          <img src="../images/img.jpg" alt=""></img>
-        </a>
+        <div className="media-links">
+          <a href="https://www.instagram.com">
+            <FaInstagram className="media-img"/>
+          </a>
+        </div>
+        <div className="media-links">
+          <a href="https://www.facebook.com">
+            <FaFacebook className="media-img"/>
+          </a>
+        </div>
+        <div className="media-links">
+          <a href="https://www.facebook.com">
+            <img src="../images/img.jpg" alt=""></img>
+          </a>
+        </div>
       </div>
     </div>
   );

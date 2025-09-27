@@ -1,11 +1,13 @@
+import { GiBoba } from "react-icons/gi";
+
 const Nav = () => {
   return (
-    <nav className="nav">
-      <div className="logo">
-        <img src="" alt="logo" />
-        <h2>MySite</h2>
+    <nav id="nav">
+      <div className="brand">
+        <GiBoba id="brand-logo"/>
+        <h2>Boba</h2>
       </div>
-      <div className="links">
+      <div className="nav-links">
         <a href="/" className="nav-link">
           Home
         </a>

@@ -1,0 +1,103 @@
+/* Global */
+body, html {
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+    color: #542344;
+}
+
+a, a:visited, a:focus, a:hover {
+    text-decoration: none;
+    color: #542344;
+}
+
+/* End Global CSS */ 
+
+/* Start About CSS*/
+#about {
+    margin-top: 100px; /* for nav */
+    height: 100vh;
+}
+/* End About CSS */
+
+/* Start Gallery CSS*/
+#gallery {
+    margin-top: 100px; /* for nav */
+    height: 100vh;
+}
+
+/* End Gallery CSS */
+
+/* Start Nav CSS */ 
+#nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+    background-color: #EBF5EE;
+}
+
+#nav, .brand{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#brand-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.brand {
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-links {
+    margin-top: 20px;
+}
+
+.nav-link {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: larger;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+}
+
+
+/* END Nav CSS */ 
+
+/* Start Footer CSS */
+#footer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+    margin-right: 30%;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+
+.media-img {
+    width: 40px;
+    height: 40px;
+    color: black;
+    margin: 10px;
+}
+
+/*End Footer CSS */ 
+
+
+
