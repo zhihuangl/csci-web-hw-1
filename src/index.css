@@ -1,280 +1,380 @@
 /* Global */
-body, html {
-    width: 100%;
-    margin: 0; 
-    padding: 0;
-    color: #542344;
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+body,
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #542344;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
-a, a:visited, a:focus, a:hover {
-    text-decoration: none;
-    color: #542344;
+a,
+a:visited,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: #542344;
 }
 
-#about, #gallery, #contact, #not-found, #menu {
-    margin-top: 100px; /* for nav */
-    height: 100vh;
-    text-align: center;
-    align-items: center;
+#about,
+#gallery,
+#contact,
+#not-found,
+#menu {
+  margin-top: 100px; /* for nav */
+  height: 100vh;
+  text-align: center;
+  align-items: center;
 }
 
 textarea {
-    resize: none;
+  resize: none;
 }
 
-/* End Global CSS */ 
+/* End Global CSS */
 
-/* Start Menu CSS */ 
+/* Start Menu CSS */
+.menu-info {
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-size: 1rem;
+}
 
-/* End Menu CSS */ 
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #2e5d34;
+  display: inline-block;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card li {
+  margin: 5px 0;
+}
+
+.classics {
+  margin-top: 2.5rem;
+}
+
+.classics h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  text-decoration: underline;
+}
+
+.classics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.classics li {
+  margin: 5px 0;
+}
+
+/* End Menu CSS */
 
 /* Start Contact CSS */
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
-    border-radius: 20px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+  border-radius: 20px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
 input {
-    height: 20px;
+  height: 20px;
 }
 
 label > p {
-    text-align: left;
-    margin: 0;
+  text-align: left;
+  margin: 0;
 }
 
 .contact-submit {
-    width: 100px;
+  width: 100px;
 }
 
 .message {
-    width: 400px;
-    height: 400px;
+  width: 400px;
+  height: 400px;
 }
 
-/* End Contact CSS */ 
-
-
+/* End Contact CSS */
 
 /* Start About CSS*/
 .description {
-    padding-left: 25%;
-    padding-right: 25%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .store-imgs {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .store-img {
-    max-width: 400px;
-    max-height: 400px;
-    margin: 10px;
+  max-width: 400px;
+  max-height: 400px;
+  margin: 10px;
 }
 /* End About CSS */
 
 /* Start Gallery CSS*/
 
-.gallery-carousel > div 
-{
-    width: 500px;
-    height: 500px;
+.gallery-carousel > div {
+  width: 500px;
+  height: 500px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .gallery-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 /* End Gallery CSS */
 
-/* Start Nav CSS */ 
+/* Start Nav CSS */
 #nav {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    z-index: 1;
-    background-color: #EBF5EE;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+  background-color: #ebf5ee;
 }
 
-#nav, .brand{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+#nav,
+.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 #brand-logo {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 
 .brand {
-    align-items: center;
+  align-items: center;
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav-links {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .nav-link {
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: larger;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: larger;
 }
 
 .nav-link:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-/* END Nav CSS */ 
+/* END Nav CSS */
 
 /* Start Footer CSS */
 #footer {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #bfd1e5;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #bfd1e5;
 }
 
 .map-img {
-    width: 200px;
-    height: 200px;
-    margin-left: 20px;
-        margin-top: 20px;
-        text-align: center;
+  width: 200px;
+  height: 200px;
+  margin-left: 20px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .map-img > a > img {
-    width: 100%;
+  width: 100%;
 }
 
 .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
 }
 
 .media-img {
-    width: 40px;
-    height: 40px;
-    color: black;
-    margin: 10px;
+  width: 40px;
+  height: 40px;
+  color: black;
+  margin: 10px;
 }
 
-/*End Footer CSS */ 
+/*End Footer CSS */
 
-
-
-/* Mobile CSS */ 
+/* Mobile CSS */
 @media screen and (max-width: 450px) {
+  .nav-links {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .nav-links {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
+  .gallery-carousel {
+    width: 300px;
+  }
+  .gallery-carousel > div {
+    width: 300px;
+    height: 300px;
+  }
 
-    .gallery-carousel {
-        width: 300px;
-    }
-        .gallery-carousel>div {
-            width: 300px;
-            height: 300px;
-        }
+  img,
+  .gallery-img {
+    width: 300px;
+  }
 
-    img, .gallery-img {
-       width: 300px;
-    }
+  #footer {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .menu-img {
-        width: 300px;
-    }
+  .card {
+    text-align: center;
+  }
 
-    #footer {
-        flex-direction: column;
-        align-items: center;
-    }
+  .classics {
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s;
+  }
+
+  .classics:hover {
+    transform: translateY(-5px);
+  }
+
+  .classics h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #2e5d34;
+    display: inline-block;
+  }
+
+  .classics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .classics li {
+    margin: 5px 0;
+  }
 }
 
-/* Tablet CSS */ 
+/* Tablet CSS */
 @media screen and (max-width: 900px) {
-    .store-imgs {
-        flex-direction: column;
-    }
+  .store-imgs {
+    flex-direction: column;
+  }
 
-    #about, #menu, #gallery, #contact {
-        height: auto;
-    }
+  #about,
+  #menu,
+  #gallery,
+  #contact {
+    height: auto;
+  }
 
-    label, .message {
-        width: 250px;
-        height: auto;
-    }
-
-
-
+  label,
+  .message {
+    width: 250px;
+    height: auto;
+  }
 }
 
 /* Hamburger button */
 .hamburger {
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: none;
-    /* hidden on desktop */
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  /* hidden on desktop */
 }
 
 /* --- Mobile styles --- */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
+  .hamburger {
+    display: block;
+  }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 1rem;
-        background: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 1rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 
-    .nav-links.open {
-        display: flex;
-        /* show when menuOpen is true */
-    }
+  .nav-links.open {
+    display: flex;
+    /* show when menuOpen is true */
+  }
 
-    .nav-link {
-        padding: 0.5rem 0;
-    }
+  .nav-link {
+    padding: 0.5rem 0;
+  }
 }
