@@ -1,5 +1,6 @@
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import location from "../images/location.png";
 
 const Footer = () => {
   return (
@@ -14,21 +15,24 @@ const Footer = () => {
         <p className="days">Saturday: 8am - 8pm</p>
         <p className="days">Sunday: 8am - 8pm</p>
       </div>
-      <div className="links">
-        <div className="media-links">
-          <a href="https://www.instagram.com">
-            <FaInstagram className="media-img"/>
+      <div className="media-container">
+        <div className="map-img">
+          <a href="https://www.googlemaps.com">
+            <img src={location} alt="map"></img>
           </a>
+          <p>Some random address</p>
         </div>
-        <div className="media-links">
-          <a href="https://www.facebook.com">
-            <FaFacebook className="media-img"/>
-          </a>
-        </div>
-        <div className="media-links">
-          <a href="https://www.facebook.com">
-            <img src="../images/img.jpg" alt=""></img>
-          </a>
+        <div className="links">
+          <div className="media-links">
+            <a href="https://www.instagram.com">
+              <FaInstagram className="media-img" />
+            </a>
+          </div>
+          <div className="media-links">
+            <a href="https://www.facebook.com">
+              <FaFacebook className="media-img" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

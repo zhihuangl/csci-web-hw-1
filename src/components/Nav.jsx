@@ -1,15 +1,27 @@
-import { GiBoba } from "react-icons/gi";
-import brand from "../images/brand.png"
+import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import brand from "../images/brand.png";
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav id="nav">
-      <a href="/" className="nav-link">
-        <div className="brand">
-          <img src={brand} id="brand-logo" />
-        </div>
+      <a href="/" className="brand">
+        <img src={brand} id="brand-logo" alt="Brand Logo" />
       </a>
-      <div className="nav-links">
+
+      {/* Hamburger icon */}
+      <button
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+      >
+        <GiHamburgerMenu />
+      </button>
+
+      {/* Links */}
+      <div className={`nav-links ${menuOpen ? "open" : ""}`}>
         <a href="/#about" className="nav-link">
           About
         </a>

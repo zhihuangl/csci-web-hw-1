@@ -17,7 +17,7 @@ a, a:visited, a:focus, a:hover {
     margin-top: 100px; /* for nav */
     height: 100vh;
     text-align: center;
-
+    align-items: center;
 }
 
 textarea {
@@ -25,6 +25,10 @@ textarea {
 }
 
 /* End Global CSS */ 
+
+/* Start Menu CSS */ 
+
+/* End Menu CSS */ 
 
 /* Start Contact CSS */
 .contact-form {
@@ -65,8 +69,8 @@ label > p {
 
 /* Start About CSS*/
 .description {
-    width: 60%;
-    margin-left: 20%;
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
 .store-imgs {
@@ -83,10 +87,22 @@ label > p {
 /* End About CSS */
 
 /* Start Gallery CSS*/
-#gallery {
 
+.gallery-carousel > div 
+{
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 /* End Gallery CSS */
 
 /* Start Nav CSS */ 
@@ -136,11 +152,24 @@ label > p {
 
 /* Start Footer CSS */
 #footer {
+    margin-top: 20px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    margin-left: 30%;
-    margin-right: 30%;
     justify-content: center;
+    background-color: #bfd1e5;
+}
+
+.map-img {
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+        margin-top: 20px;
+        text-align: center;
+}
+
+.map-img > a > img {
+    width: 100%;
 }
 
 .links {
@@ -163,9 +192,89 @@ label > p {
 
 /* Mobile CSS */ 
 @media screen and (max-width: 450px) {
+
     .nav-links {
         position: relative;
         display: flex;
         flex-direction: column;
+    }
+
+    .gallery-carousel {
+        width: 300px;
+    }
+        .gallery-carousel>div {
+            width: 300px;
+            height: 300px;
+        }
+
+    img, .gallery-img {
+       width: 300px;
+    }
+
+    .menu-img {
+        width: 300px;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Tablet CSS */ 
+@media screen and (max-width: 900px) {
+    .store-imgs {
+        flex-direction: column;
+    }
+
+    #about, #menu, #gallery, #contact {
+        height: auto;
+    }
+
+    label, .message {
+        width: 250px;
+        height: auto;
+    }
+
+
+
+}
+
+/* Hamburger button */
+.hamburger {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    /* hidden on desktop */
+}
+
+/* --- Mobile styles --- */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.open {
+        display: flex;
+        /* show when menuOpen is true */
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
     }
 }
