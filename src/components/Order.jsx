@@ -139,7 +139,7 @@ const Order = () => {
             />
           </div>
 
-          <button onClick={addCustomDrink}>+ Add Custom Drink</button>
+          <button className='add-custom-button' onClick={addCustomDrink}>+ Add Custom Drink</button>
         </div>
 
         <div id="premade">

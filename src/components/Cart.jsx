@@ -36,7 +36,7 @@ const Cart = ({ cart, setCart }) => {
 
     return (
         <div id="cart">
-            <h2>🛒 Your Cart</h2>
+            <h2>Your Cart</h2>
 
             {cart.length === 0 ? (
                 <p>Your cart is empty. <a href="/order">Go back to order page</a></p>
@@ -67,7 +67,7 @@ const Cart = ({ cart, setCart }) => {
                         </tbody>
                     </table>
                     <h3>Total: ${total}</h3>
-                    <button onClick={clearCart}>🗑️ Clear Cart</button>
+                    <button onClick={clearCart}>Clear Cart</button>
                 </>
             )}
         </div>
