@@ -28,8 +28,11 @@ const Nav = () => {
         <a href="/#menu" className="nav-link">
           Menu
         </a>
-        <a href="#gallery" className="nav-link">
+        <a href="/#gallery" className="nav-link">
           Gallery
+        </a>
+        <a href="/order" className="nav-link">
+          Order
         </a>
         <a href="/contact" className="nav-link">
           Contact
