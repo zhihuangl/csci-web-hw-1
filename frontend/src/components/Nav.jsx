@@ -1,9 +1,26 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { loadUser, logoutUser } from "../services/user.js";
 import brand from "../images/brand.png";
+import { useEffect } from "react";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    async function fetchUser() {
+      const user = await loadUser();
+      setUser(user);
+      console.log("Loaded user:", user);
+    }
+    fetchUser();
+  }, []);
+
+  const handleLogout = async () => {
+    await logoutUser();
+    setUser(null);
+  }
 
   return (
     <nav id="nav">
@@ -37,6 +54,13 @@ const Nav = () => {
         <a href="/contact" className="nav-link">
           Contact
         </a>
+        {user ? (
+          <a href='/' className="nav-link" onClick={handleLogout}>Logout</a>
+        ) : (
+          <a href="/login" className="nav-link">
+            Login
+          </a>
+        )}
       </div>
     </nav>
   );

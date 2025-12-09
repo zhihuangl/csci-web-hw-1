@@ -1,13 +1,16 @@
+import { fetchMenu } from "../services/order";
+import { useEffect, useState } from "react";
+
 const Menu = () => {
-  // 🧋 Define all options in one place
-  const options = {
-    tea: ["Jasmine Green Tea", "Black Tea", "Thai Tea", "Jasmine", "Oolong", "Chai", ],
-    fruit: ["Strawberry","Lemon","Wintermelon","Peach", "Lychee","Passionfruit","Mango",
-              "Coconut","Watermelon",],
-    topping: ["Mango Pudding","Coconut Jelly","Tapioca Pearl","Herbal Jelly","Lychee Jelly",
-              "Mango Jelly","Matcha Jelly","Milk Foam","Red Bean",],
-    classics: ["Classic Milk Tea","Thai Milk Tea","Matcha Latte","Matcha Green Tea",],
-  };
+  const [menu, setMenu] = useState(null);
+  
+  useEffect(() => {
+  async function loadMenu() {
+    const data = await fetchMenu();
+    setMenu(data);
+  }
+  loadMenu();
+}, []);
 
   return (
     <>
@@ -20,19 +23,44 @@ const Menu = () => {
         </p>
 
         <div className="menu-grid">
-          {Object.entries(options).map(([category, items]) => (
-            <div className="card" key={category}>
-              <h3>
-                {category.charAt(0).toUpperCase() + category.slice(1)}{" "}
-                {category === "classics" ? "$5" : ""}
-              </h3>
-              <ul>
-                {items.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {
+            menu && (
+              <>
+                <div className="card">
+                  <h3>Classics $5</h3>
+                  <ul>
+                    {menu["classicDrinks"].map((drink, index) => (
+                      <li key={index}>{drink.name}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="card">
+                  <h3>Tea</h3>
+                  <ul>
+                    {menu["customOptions"].tea.map((tea, index) => (
+                      <li key={index}>{tea}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="card">
+                  <h3>Fruits</h3>
+                  <ul>
+                    {menu["customOptions"].fruit.map((fruit, index) => (
+                      <li key={index}>{fruit}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="card">
+                  <h3>Toppings</h3>
+                  <ul> 
+                    {menu["customOptions"].toppings.map((topping, index) => (
+                      <li key={index}>{topping}</li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            )
+          }
         </div>
       </div>
     </>

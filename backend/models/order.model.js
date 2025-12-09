@@ -8,7 +8,7 @@ const OrderSchema = new mongoose.Schema({
       name: String,                 // name of classic drink or custom drink
       tea: String,                  // only for custom
       fruit: String,                // only for custom
-      toppings: [String],           // any toppings chosen
+      topping: String,           // any toppings chosen
       quantity: { type: Number, default: 1 },
       price: Number                 // price per item
     }
