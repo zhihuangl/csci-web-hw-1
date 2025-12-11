@@ -10,6 +10,21 @@ async function fetchMenu() {
   }
 }
 
+async function sendOrder(order) {
+  try {
+    const res = await fetch(`${backendUrl}/api/orders`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(order),
+    });
+    const data = await res.json();
+    console.log(data);
+    return data;
+  } catch (err) {
+    console.error("Error sending order:", err);
+  }
+}
 
 
-export { fetchMenu };
+
+export { fetchMenu, sendOrder };

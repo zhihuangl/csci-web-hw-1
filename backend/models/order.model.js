@@ -5,10 +5,10 @@ const OrderSchema = new mongoose.Schema({
   items: [
     {
       type: { type: String, enum: ["classic", "custom"], required: true },
-      name: String,                 // name of classic drink or custom drink
+      name: String,                 // name of classic drink
       tea: String,                  // only for custom
       fruit: String,                // only for custom
-      topping: String,           // any toppings chosen
+      topping: String,           // 1 topping chosen
       quantity: { type: Number, default: 1 },
       price: Number                 // price per item
     }
