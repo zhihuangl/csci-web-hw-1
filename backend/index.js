@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "https://mybobapage.netlify.app/", //replace with deployed frontend URL 
+  origin: "https://mybobapage.netlify.app", //replace with deployed frontend URL 
   credentials: true
 }));
 
